@@ -39,7 +39,7 @@ const NavBar = () => (
 
       {/* Resume Link */}
       <a
-        href="/Aditya_Pandey_Resume.pdf"
+        href="/Resume_Aditya_Pandey.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className="px-3 py-1 border border-cyan-500 rounded text-sm hover:bg-cyan-500 hover:text-black transition-colors"
