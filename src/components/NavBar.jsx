@@ -1,12 +1,11 @@
 import React from 'react'
 import logo from '../assets/Logo.png'
-import { FaLinkedin, FaGithub, FaTwitter, FaInstagram } from 'react-icons/fa'
+import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa'
 
 const socialLinks = [
   { icon: FaLinkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/mainadityapandey' },
   { icon: FaGithub, label: 'GitHub', href: 'https://github.com/thecritiz' },
   { icon: FaTwitter, label: 'Twitter', href: 'https://twitter.com/' },
-  { icon: FaInstagram, label: 'Instagram', href: 'https://instagram.com/' },
 ]
 
 const NavBar = () => (
@@ -20,9 +19,7 @@ const NavBar = () => (
       />
     </div>
 
-    
-
-    {/* Social Icons */}
+    {/* Social Icons + Resume */}
     <div className="flex items-center gap-4">
       {socialLinks.map(({ icon: Icon, label, href }) => (
         <a
@@ -39,6 +36,16 @@ const NavBar = () => (
           </span>
         </a>
       ))}
+
+      {/* Resume Link */}
+      <a
+        href="/Aditya_Pandey_Resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="px-3 py-1 border border-cyan-500 rounded text-sm hover:bg-cyan-500 hover:text-black transition-colors"
+      >
+        Resume
+      </a>
     </div>
   </nav>
 )

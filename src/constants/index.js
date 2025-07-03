@@ -81,17 +81,18 @@ export const CONTACT = {
 
 export const BLOGS = [
   {
-    title: "Zero-Shot Gait Re-identification: A Privacy-Conscious Approach",
-    date: "June 2025",
+    title: "Enhancing Gait Representations for Zero-Shot Person Identification",
+    date: "July 2025",
     description:
-      "An in-depth technical guide on building a gait-based person re-identification system using pose, motion, and zero-shot learning — ideal for privacy-respecting surveillance.",
-    link: "https://medium.com/@thecritizz/zero-shot-gait-reidentification-a-privacy-conscious-approach-xyz123",
+      "A deep dive into zero-shot gait-based person re-identification using pose sequences, deep embeddings, and privacy-preserving features. Includes open challenges and future directions.",
+    link: "https://medium.com/@thecritizz/enhancing-gait-representations-for-zero-shot-person-identification-challenges-methods-and-future-e1732572ee78"
   },
   {
     title: "Follow My Blog on Medium",
     date: "Ongoing",
     description:
-      "I regularly post about full-stack projects, machine learning, CV-based systems, and deployment pipelines. Stay updated with hands-on guides and technical insights.",
-    link: "https://medium.com/@thecritizz",
-  },
+      "I write about full-stack development, computer vision, privacy-preserving AI, and ML-powered web apps. Check out my latest content on Medium.",
+    link: "https://medium.com/@thecritizz"
+  }
 ];
+
