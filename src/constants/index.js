@@ -43,9 +43,10 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
-    title: "Facial Emotion-Based Movie Recommender",
+    title: "Flick-Finder : Facial Emotion-Based Movie Recommender",
     image: project1,
-    description: "Real-time web app that recommends movies based on a user’s facial emotion. Built with React frontend, FastAPI backend, OpenCV for detection, and Keras CNN for emotion classification.",
+    description:
+      "Real-time web app that recommends movies based on a user’s facial emotion. Built with React frontend, FastAPI backend, OpenCV for detection, and Keras CNN for emotion classification.",
     fullDescription:
       "Developed a full-stack real-time movie recommendation system driven by facial emotion recognition. The app captures a selfie via webcam or uploads an image, uses OpenCV and a CNN trained on FER2013 to classify the emotion, and maps it to movie genres (e.g., 'happy' → Comedy, 'sad' → Drama). A TF-IDF and cosine similarity pipeline ranks and returns the most suitable movies from a preprocessed dataset. FastAPI handles inference, and the React frontend provides a smooth, animated UI using TailwindCSS and Framer Motion.",
     technologies: [
@@ -58,8 +59,26 @@ export const PROJECTS = [
     ],
     github: "https://github.com/thecritiz/expression-upgraded",
   },
-  // more...
+
+  {
+    title: "Real-Time Attentiveness Checker",
+    image: project2,
+    description:
+      "A browser-based tool that detects attentiveness using facial landmarks and eye aspect ratio (EAR) in real-time. Built with MediaPipe, OpenCV, FastAPI, and React.",
+    fullDescription:
+      "Designed and developed a modular attentiveness detection system that uses MediaPipe FaceMesh and OpenCV to analyze facial landmarks and compute the Eye Aspect Ratio (EAR) for drowsiness or focus detection. The FastAPI backend processes frames sent from the webcam-enabled React frontend, which displays live attention status. Engineered for scalability and real-world deployment with clean microservice separation.",
+    technologies: [
+      "FastAPI",
+      "React.js",
+      "OpenCV",
+      "MediaPipe",
+      "Framer Motion",
+    ],
+    github: "https://github.com/thecritiz/distraction-detect",
+  },
 ];
+
+
 
 
 
