@@ -2,6 +2,10 @@ import React from 'react'
 import { HERO_CONTENT } from '../constants'
 import profilePic from '../assets/profile.png'
 import { motion } from 'framer-motion'
+import { useTypewriter, Cursor } from 'react-simple-typewriter'
+
+// Lucide Icons (You can customize or swap as needed)
+import { Code, Brain, Database, Network } from 'lucide-react'
 
 const fadeInFromLeft = (delay = 0) => ({
   hidden: { x: -100, opacity: 0 },
@@ -12,7 +16,37 @@ const fadeInFromLeft = (delay = 0) => ({
   },
 })
 
+const roles = [
+  {
+    label: 'Full Stack Developer',
+    icon: <Code className="inline-block w-5 h-5 mr-2 text-pink-400" />,
+  },
+  {
+    label: 'AI/ML Researcher',
+    icon: <Brain className="inline-block w-5 h-5 mr-2 text-purple-400" />,
+  },
+  {
+    label: 'Database Designer',
+    icon: <Database className="inline-block w-5 h-5 mr-2 text-blue-400" />,
+  },
+  {
+    label: 'DevOps Enthusiast',
+    icon: <Network className="inline-block w-5 h-5 mr-2 text-green-400" />,
+  },
+]
+
 const Hero = () => {
+  const labels = roles.map((r) => r.label)
+  const [text] = useTypewriter({
+    words: labels,
+    loop: true,
+    delaySpeed: 1500,
+  })
+
+  // Get current icon based on current text (fallback if unmatched)
+  const activeRole = roles.find((r) => r.label === text)
+  const currentIcon = activeRole ? activeRole.icon : roles[0].icon
+
   return (
     <section id="hero" className="border-b border-transparent pb-16 lg:mb-32">
       <div className="flex flex-wrap items-center justify-center">
@@ -28,14 +62,16 @@ const Hero = () => {
               Aditya Pandey
             </motion.h1>
 
-            <motion.span
+            <motion.div
               variants={fadeInFromLeft(0.4)}
               initial="hidden"
               animate="visible"
-              className="text-2xl lg:text-3xl tracking-tight text-transparent bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text"
+              className="h-[44px] text-2xl lg:text-3xl tracking-tight text-transparent bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text font-mono flex items-center"
             >
-              Full Stack Developer
-            </motion.span>
+              {currentIcon}
+              {text}
+              <Cursor cursorStyle="|" />
+            </motion.div>
 
             <motion.p
               variants={fadeInFromLeft(0.8)}
