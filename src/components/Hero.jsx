@@ -95,7 +95,7 @@ const Hero = () => {
             <img
               src={profilePic}
               alt="Aditya Pandey"
-              className="w-[300px] md:w-[400px] h-auto rounded-xl filter brightness-50 contrast-125 shadow-md"
+              className="w-[300px] md:w-[400px] h-auto rounded-xl filter brightness-50 contrast-125"
             />
           </motion.div>
         </div>
