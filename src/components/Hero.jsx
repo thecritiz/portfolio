@@ -1,6 +1,6 @@
 import React from 'react'
 import { HERO_CONTENT } from '../constants'
-import profilePic from '../assets/profile.png'
+import profilePic from '../assets/profile.jpg'
 import { motion } from 'framer-motion'
 import { useTypewriter, Cursor } from 'react-simple-typewriter'
 
