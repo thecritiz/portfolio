@@ -72,7 +72,7 @@ const About = () => {
             initial={{ opacity: 0 }}
             animate={isSectionInView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-justify py-6"
+            className="mt-8 mb-10 max-w-2xl text-justify text-lg leading-relaxed text-neutral-400"
           >
             {ABOUT_TEXT}
           </motion.p>
