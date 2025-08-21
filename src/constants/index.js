@@ -10,7 +10,7 @@ import project4 from "../assets/projects/project-4.jpg";
 /*  HERO & ABOUT                                                      */
 /* ------------------------------------------------------------------ */
 
-export const HERO_CONTENT = `I'm an aspiring full-stack developer and final-year B.Tech (CSE) student who loves turning data-driven ideas into production-ready web apps. Through internships at Matrix Media Solutions and Webrasta Technologies, I’ve built real-time dashboards, automation pipelines, and end-to-end React + Node solutions with PostgreSQL/MongoDB backends. My goal is to keep shipping clean, scalable code that solves real business problems.`;
+export const HERO_CONTENT = `I'm a full-stack and AIML developer, and a final-year B.Tech (CSE) student dedicated to building innovative software that leverages data and intelligence. My professional journey has provided hands-on experience in both domains: from developing complete React + Node.js solutions with PostgreSQL/MongoDB backends to creating real-time dashboards and automation pipelines using my AIML expertise. I am driven to deliver clean, scalable, and impactful code that bridges the gap between data and dynamic web experiences.`;
 
 export const ABOUT_TEXT = `Currently finishing my B.Tech at Christ University, I’ve accumulated hands-on experience in JavaScript/TypeScript, React, Node.js, Express, SQL, and Python data-science tooling (Pandas, Seaborn). I enjoy collaborative problem-solving—whether that’s automating order workflows or extracting insights from multi-gigabyte datasets. When I’m not coding, you’ll find me exploring new ML libraries or contributing to open-source.`;
 
