@@ -15,12 +15,24 @@ const fadeInFromLeft = (delay = 0) => ({
   },
 })
 
-/* Roles */
+/* Roles — JSX icons (SAME BEHAVIOR AS ORIGINAL) */
 const roles = [
-  { label: 'Full Stack Developer', icon: Code },
-  { label: 'AI/ML Researcher', icon: Brain },
-  { label: 'Database Designer', icon: Database },
-  { label: 'DevOps Enthusiast', icon: Network },
+  {
+    label: 'Full Stack Developer',
+    icon: <Code className="w-4 h-4 mr-2 text-neutral-400 opacity-70" />,
+  },
+  {
+    label: 'AI/ML Researcher',
+    icon: <Brain className="w-4 h-4 mr-2 text-neutral-400 opacity-70" />,
+  },
+  {
+    label: 'Database Designer',
+    icon: <Database className="w-4 h-4 mr-2 text-neutral-400 opacity-70" />,
+  },
+  {
+    label: 'DevOps Enthusiast',
+    icon: <Network className="w-4 h-4 mr-2 text-neutral-400 opacity-70" />,
+  },
 ]
 
 const Hero = () => {
@@ -32,10 +44,9 @@ const Hero = () => {
     delaySpeed: 1500,
   })
 
-  const activeRole =
-    roles.find((r) => r.label === text) ?? roles[0]
-
-  const Icon = activeRole.icon
+  /* EXACT SAME LOGIC AS YOUR ORIGINAL */
+  const activeRole = roles.find((r) => r.label === text)
+  const currentIcon = activeRole ? activeRole.icon : roles[0].icon
 
   return (
     <section
@@ -66,7 +77,7 @@ const Hero = () => {
                 Aditya Pandey
               </motion.h1>
 
-              {/* Role */}
+              {/* Role (ICON + TEXT CHANGE TOGETHER) */}
               <motion.div
                 variants={fadeInFromLeft(0.3)}
                 initial="hidden"
@@ -81,8 +92,10 @@ const Hero = () => {
                   bg-clip-text
                 "
               >
-                <Icon className="w-4 h-4 mr-2 opacity-70" />
-                {text}
+                <span className="flex items-center">
+                  {currentIcon}
+                  {text}
+                </span>
                 <Cursor cursorStyle="|" />
               </motion.div>
 
