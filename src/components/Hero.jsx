@@ -3,101 +3,128 @@ import { HERO_CONTENT } from '../constants'
 import profilePic from '../assets/profile.jpg'
 import { motion } from 'framer-motion'
 import { useTypewriter, Cursor } from 'react-simple-typewriter'
-
-// Lucide Icons (You can customize or swap as needed)
 import { Code, Brain, Database, Network } from 'lucide-react'
 
+/* Animation */
 const fadeInFromLeft = (delay = 0) => ({
-  hidden: { x: -100, opacity: 0 },
+  hidden: { x: -60, opacity: 0 },
   visible: {
     x: 0,
     opacity: 1,
-    transition: { duration: 0.5, delay },
+    transition: { duration: 0.6, delay, ease: 'easeOut' },
   },
 })
 
+/* Roles */
 const roles = [
-  {
-    label: 'Full Stack Developer',
-    icon: <Code className="inline-block w-5 h-5 mr-2 text-pink-400" />,
-  },
-  {
-    label: 'AI/ML Researcher',
-    icon: <Brain className="inline-block w-5 h-5 mr-2 text-purple-400" />,
-  },
-  {
-    label: 'Database Designer',
-    icon: <Database className="inline-block w-5 h-5 mr-2 text-blue-400" />,
-  },
-  {
-    label: 'DevOps Enthusiast',
-    icon: <Network className="inline-block w-5 h-5 mr-2 text-green-400" />,
-  },
+  { label: 'Full Stack Developer', icon: Code },
+  { label: 'AI/ML Researcher', icon: Brain },
+  { label: 'Database Designer', icon: Database },
+  { label: 'DevOps Enthusiast', icon: Network },
 ]
 
 const Hero = () => {
   const labels = roles.map((r) => r.label)
+
   const [text] = useTypewriter({
     words: labels,
     loop: true,
     delaySpeed: 1500,
   })
 
-  // Get current icon based on current text (fallback if unmatched)
-  const activeRole = roles.find((r) => r.label === text)
-  const currentIcon = activeRole ? activeRole.icon : roles[0].icon
+  const activeRole =
+    roles.find((r) => r.label === text) ?? roles[0]
+
+  const Icon = activeRole.icon
 
   return (
-    <section id="hero" className="border-b border-transparent pb-16 lg:mb-32">
-      <div className="flex flex-wrap items-center justify-center">
-        {/* Left Side (Text) */}
-        <div className="w-full lg:w-1/2">
-          <div className="flex flex-col items-center lg:items-start px-6 lg:px-10">
-            <motion.h1
-              variants={fadeInFromLeft(0)}
-              initial="hidden"
-              animate="visible"
-              className="pb-8 text-5xl lg:text-8xl font-light tracking-tight text-center lg:text-left"
-            >
-              Aditya Pandey
-            </motion.h1>
+    <section
+      id="hero"
+      className="border-b border-transparent py-16 sm:py-20 lg:py-32"
+    >
+      {/* Max-width container */}
+      <div className="mx-auto max-w-[1400px] px-4">
+        <div className="flex flex-col-reverse lg:flex-row items-center gap-14 lg:gap-20">
 
-            <motion.div
-              variants={fadeInFromLeft(0.4)}
-              initial="hidden"
-              animate="visible"
-              className="h-[44px] text-2xl lg:text-3xl tracking-tight text-transparent bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text font-mono flex items-center"
-            >
-              {currentIcon}
-              {text}
-              <Cursor cursorStyle="|" />
-            </motion.div>
+          {/* TEXT */}
+          <div className="w-full lg:w-1/2">
+            <div className="flex flex-col items-center lg:items-start">
 
-            <motion.p
-              variants={fadeInFromLeft(0.8)}
-              initial="hidden"
-              animate="visible"
-              className="mt-8 mb-10 max-w-2xl text-justify text-lg leading-relaxed text-neutral-400"
-            >
-              {HERO_CONTENT}
-            </motion.p>
+              {/* Name */}
+              <motion.h1
+                variants={fadeInFromLeft(0)}
+                initial="hidden"
+                animate="visible"
+                className="
+                  pb-4
+                  text-[clamp(2.75rem,6vw,6rem)]
+                  font-semibold
+                  tracking-[-0.02em]
+                  text-center lg:text-left
+                "
+              >
+                Aditya Pandey
+              </motion.h1>
+
+              {/* Role */}
+              <motion.div
+                variants={fadeInFromLeft(0.3)}
+                initial="hidden"
+                animate="visible"
+                className="
+                  min-h-[36px] sm:min-h-[40px]
+                  flex items-center justify-center lg:justify-start
+                  text-[clamp(1.1rem,2.5vw,1.75rem)]
+                  font-mono tracking-tight
+                  text-transparent bg-gradient-to-r
+                  from-neutral-300 via-neutral-400 to-neutral-300
+                  bg-clip-text
+                "
+              >
+                <Icon className="w-4 h-4 mr-2 opacity-70" />
+                {text}
+                <Cursor cursorStyle="|" />
+              </motion.div>
+
+              {/* Description */}
+              <motion.p
+                variants={fadeInFromLeft(0.6)}
+                initial="hidden"
+                animate="visible"
+                className="
+                  mt-8
+                  max-w-[60ch]
+                  text-left
+                  text-[clamp(1rem,1.2vw,1.125rem)]
+                  leading-relaxed
+                  text-neutral-500
+                "
+              >
+                {HERO_CONTENT}
+              </motion.p>
+            </div>
           </div>
-        </div>
 
-        {/* Right Side (Image) */}
-        <div className="w-full lg:w-1/2 px-6 lg:px-8">
-          <motion.div
-            initial={{ x: 100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 1.2 }}
-            className="flex justify-center"
-          >
-            <img
-              src={profilePic}
-              alt="Aditya Pandey"
-              className="w-[300px] md:w-[400px] h-auto rounded-xl filter brightness-50 contrast-125"
-            />
-          </motion.div>
+          {/* IMAGE */}
+          <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+            <motion.div
+              initial={{ x: 60, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.9, ease: 'easeOut' }}
+            >
+              <img
+                src={profilePic}
+                alt="Aditya Pandey"
+                className="
+                  w-[220px] sm:w-[280px] md:w-[340px] xl:w-[420px]
+                  rounded-xl
+                  brightness-75 contrast-110 grayscale-[20%]
+                  ring-1 ring-neutral-700/50
+                "
+              />
+            </motion.div>
+          </div>
+
         </div>
       </div>
     </section>

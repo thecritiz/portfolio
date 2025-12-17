@@ -20,6 +20,23 @@ export const ABOUT_TEXT = `Currently finishing my B.Tech at Christ University, I
 
 export const EXPERIENCES = [
   {
+  year: "Oct 2025 – Present",
+  role: "Product Support Analyst Intern",
+  company: "Amagi Media Labs",
+  description:
+    "Diagnosed and resolved production issues in large-scale ad-tech systems by analyzing backend logs, SQL datasets, and REST API responses. Debugged containerized microservices running on Kubernetes, investigated pod-level failures, and validated fixes across staging and production environments. Built internal Python/SQL scripts to automate data validation and reduce manual investigation time. Collaborated with backend engineers to reproduce bugs, verify fixes, and improve system observability through detailed incident reports and dashboards.",
+  technologies: [
+    "Python",
+    "SQL",
+    "REST APIs",
+    "Kubernetes",
+    "Docker",
+    "Linux",
+    "JIRA",
+    "Monitoring & Logs"
+  ],
+},
+  {
     year: "Apr 2025 – May 2025",
     role: "Software Development Intern",
     company: "Matrix Media Solutions Pvt Ltd",
@@ -35,6 +52,7 @@ export const EXPERIENCES = [
       "Cleaned and analysed multi-quarter business datasets with Pandas, surfaced a 25% user-growth vs 8% revenue-growth gap, and built Seaborn/Matplotlib dashboards that informed marketing strategy and campaign scheduling.",
     technologies: ["Python", "Pandas", "Seaborn", "JavaScript"],
   },
+  
 ];
 
 /* ------------------------------------------------------------------ */

@@ -41,7 +41,7 @@ const Blog = () => {
       {/* Medium Profile Button */}
       <div className="mt-12 flex justify-center">
         <a
-          href="https://medium.com/@thecritizz"
+          href="https://medium.com/@techrot_aditya"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-neutral-900 border border-neutral-800 text-white px-6 py-4 rounded-xl shadow-md hover:bg-neutral-800 transition-all"
