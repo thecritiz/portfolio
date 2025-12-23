@@ -10,9 +10,17 @@ import project4 from "../assets/projects/project-4.jpg";
 /*  HERO & ABOUT                                                      */
 /* ------------------------------------------------------------------ */
 
-export const HERO_CONTENT = `I'm a full-stack and AIML developer, and a final-year B.Tech (CSE) student dedicated to building innovative software that leverages data and intelligence. My professional journey has provided hands-on experience in both domains: from developing complete React + Node.js solutions with PostgreSQL/MongoDB backends to creating real-time dashboards and automation pipelines using my AIML expertise. I am driven to deliver clean, scalable, and impactful code that bridges the gap between data and dynamic web experiences.`;
+export const HERO_CONTENT = `
+I am a full-stack and AI/ML engineer focused on designing and optimizing robust, data-driven software systems. My work spans building end-to-end web applications with React, Node.js, and PostgreSQL/MongoDB, as well as developing real-time dashboards, automation pipelines, and intelligent workflows that translate complex data into actionable insights.
 
-export const ABOUT_TEXT = `Currently finishing my B.Tech at Christ University, I’ve accumulated hands-on experience in JavaScript/TypeScript, React, Node.js, Express, SQL, and Python data-science tooling (Pandas, Seaborn). I enjoy collaborative problem-solving—whether that’s automating order workflows or extracting insights from multi-gigabyte datasets. When I’m not coding, you’ll find me exploring new ML libraries or contributing to open-source.`;
+I care deeply about performance, scalability, and clean architecture, and I approach every project with a product-oriented mindset—engineering solutions that are reliable, maintainable, and built to scale.
+`;
+
+export const ABOUT_TEXT = `
+I build and refine software systems that sit at the intersection of modern web engineering and data intelligence. My work spans JavaScript and TypeScript-based applications using React, Node.js, and Express, alongside SQL-backed systems and Python-driven data pipelines for analysis and automation.
+
+Along the way, I’ve developed a strong foundation in collaborative problem-solving—whether streamlining operational workflows, optimizing backend logic, or extracting insights from large-scale datasets. I’m currently completing my B.Tech in Computer Science at Christ University, and I continuously invest time in exploring new machine learning tooling and contributing to open-source projects to sharpen my craft.
+`;
 
 /* ------------------------------------------------------------------ */
 /*  EXPERIENCE                                                        */

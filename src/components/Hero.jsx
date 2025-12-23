@@ -101,20 +101,22 @@ const Hero = () => {
 
               {/* Description */}
               <motion.p
-                variants={fadeInFromLeft(0.6)}
-                initial="hidden"
-                animate="visible"
-                className="
-                  mt-8
-                  max-w-[60ch]
-                  text-left
-                  text-[clamp(1rem,1.2vw,1.125rem)]
-                  leading-relaxed
-                  text-neutral-500
-                "
-              >
-                {HERO_CONTENT}
-              </motion.p>
+  variants={fadeInFromLeft(0.6)}
+  initial="hidden"
+  animate="visible"
+  className="
+    mt-8
+    max-w-[60ch]
+    text-left
+    text-[clamp(1rem,1.2vw,1.125rem)]
+    leading-[1.75]
+    tracking-[0.01em]
+    text-neutral-500
+  "
+>
+  {HERO_CONTENT}
+</motion.p>
+
             </div>
           </div>
 
