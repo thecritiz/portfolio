@@ -29,7 +29,7 @@ Along the way, I’ve developed a strong foundation in collaborative problem-sol
 export const EXPERIENCES = [
   {
   year: "Oct 2025 – Present",
-  role: "Support Analyst Intern",
+  role: "Technical Operations Intern",
   company: "Amagi Media Labs",
   description:
     "Diagnosed and resolved production issues in large-scale ad-tech systems by analyzing backend logs, SQL datasets, and REST API responses. Debugged containerized microservices running on Kubernetes, investigated pod-level failures, and validated fixes across staging and production environments. Built internal Python/SQL scripts to automate data validation and reduce manual investigation time. Collaborated with backend engineers to reproduce bugs, verify fixes, and improve system observability through detailed incident reports and dashboards.",
