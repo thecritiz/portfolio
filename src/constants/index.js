@@ -3,141 +3,73 @@ import project2 from "../assets/projects/project-2.jpg";
 import project3 from "../assets/projects/project-3.jpg";
 import project4 from "../assets/projects/project-4.jpg";
 
- // Facial-expression system
-// If you keep only one project, you can delete project2–4 imports
-
 /* ------------------------------------------------------------------ */
 /*  HERO & ABOUT                                                      */
 /* ------------------------------------------------------------------ */
 
 export const HERO_CONTENT = `
-I am a full-stack and AI/ML engineer focused on designing and optimizing robust, data-driven software systems. My work spans building end-to-end web applications with React, Node.js, and PostgreSQL/MongoDB, as well as developing real-time dashboards, automation pipelines, and intelligent workflows that translate complex data into actionable insights.
+Software Engineer focused on building scalable backend systems, real-time applications, and AI-powered products. My experience spans distributed systems, observability platforms, video streaming infrastructure, and full-stack web development using React, Node.js, PostgreSQL, and cloud-native technologies.
 
-I care deeply about performance, scalability, and clean architecture, and I approach every project with a product-oriented mindset—engineering solutions that are reliable, maintainable, and built to scale.
+I enjoy solving complex engineering problems, optimizing system performance, and designing products that are reliable, maintainable, and built to scale.
 `;
 
 export const ABOUT_TEXT = `
-I build and refine software systems that sit at the intersection of modern web engineering and data intelligence. My work spans JavaScript and TypeScript-based applications using React, Node.js, and Express, alongside SQL-backed systems and Python-driven data pipelines for analysis and automation.
+I'm a Software Engineer with experience building production-facing systems across backend engineering, real-time communication, and intelligent applications. At Amagi Media Labs, I work on large-scale media and ad-tech platforms, debugging distributed services, analyzing system telemetry, and improving operational reliability.
 
-Along the way, I’ve developed a strong foundation in collaborative problem-solving—whether streamlining operational workflows, optimizing backend logic, or extracting insights from large-scale datasets. I’m currently completing my B.Tech in Computer Science at Christ University, and I continuously invest time in exploring new machine learning tooling and contributing to open-source projects to sharpen my craft.
+Outside of work, I build products ranging from WebRTC-based video conferencing platforms to real-time monitoring and alerting systems. I'm particularly interested in distributed systems, observability, databases, and the intersection of software engineering and AI.
 `;
-
-/* ------------------------------------------------------------------ */
-/*  EXPERIENCE                                                        */
-/* ------------------------------------------------------------------ */
-
-export const EXPERIENCES = [
-  {
-  year: "Oct 2025 – Present",
-  role: "Technical Operations Intern",
-  company: "Amagi Media Labs",
-  description:
-    "Diagnosed and resolved production issues in large-scale ad-tech systems by analyzing backend logs, SQL datasets, and REST API responses. Debugged containerized microservices running on Kubernetes, investigated pod-level failures, and validated fixes across staging and production environments. Built internal Python/SQL scripts to automate data validation and reduce manual investigation time. Collaborated with backend engineers to reproduce bugs, verify fixes, and improve system observability through detailed incident reports and dashboards.",
-  technologies: [
-    "Python",
-    "SQL",
-    "REST APIs",
-    "Kubernetes",
-    "Docker",
-    "Linux",
-    "JIRA",
-    "Monitoring & Logs"
-  ],
-},
-  {
-    year: "Apr 2025 – May 2025",
-    role: "Software Development Intern",
-    company: "Matrix Media Solutions Pvt Ltd",
-    description:
-      "Built a React + Express full-stack system that automated manual order processing, cut data-entry time by 60%, and added real-time delivery-status tracking. Implemented a maintenance-logging microservice for faster issue resolution.",
-    technologies: ["React", "Express.js", "PSQL", "Node.js"],
-  },
-  {
-    year: "May 2024 – Jun 2024",
-    role: "Data Analytics Intern",
-    company: "Webrasta Technologies",
-    description:
-      "Cleaned and analysed multi-quarter business datasets with Pandas, surfaced a 25% user-growth vs 8% revenue-growth gap, and built Seaborn/Matplotlib dashboards that informed marketing strategy and campaign scheduling.",
-    technologies: ["Python", "Pandas", "Seaborn", "JavaScript"],
-  },
-  
-];
 
 /* ------------------------------------------------------------------ */
 /*  PROJECTS                                                          */
 /* ------------------------------------------------------------------ */
 
 export const PROJECTS = [
-  {
-    title: "Flick-Finder : Facial Emotion-Based Movie Recommender",
-    image: project1,
-    description:
-      "Real-time web app that recommends movies based on a user’s facial emotion. Built with React frontend, FastAPI backend, OpenCV for detection, and Keras CNN for emotion classification.",
-    fullDescription:
-      "Developed a full-stack real-time movie recommendation system driven by facial emotion recognition. The app captures a selfie via webcam or uploads an image, uses OpenCV and a CNN trained on FER2013 to classify the emotion, and maps it to movie genres (e.g., 'happy' → Comedy, 'sad' → Drama). A TF-IDF and cosine similarity pipeline ranks and returns the most suitable movies from a preprocessed dataset. FastAPI handles inference, and the React frontend provides a smooth, animated UI using TailwindCSS and Framer Motion.",
-    technologies: [
-      "FastAPI",
-      "React.js",
-      "TailwindCSS",
-      "OpenCV",
-      "TensorFlow/Keras",
-      "Pandas",
-    ],
-    github: "https://github.com/thecritiz/expression-upgraded",
-  },
+{
+title: "Herd",
+image: project1,
+description:
+"Peer-to-peer video conferencing platform built with WebRTC and Socket.io for low-latency communication.",
+fullDescription:
+"Built a real-time video conferencing platform supporting peer-to-peer media streaming, signaling, ICE negotiation, and dynamic participant management. Optimized bandwidth utilization and media delivery while maintaining low-latency communication across multiple participants.",
+technologies: [
+"React",
+"Node.js",
+"WebRTC",
+"Socket.io",
+"PostgreSQL",
+],
+github: "https://multicam-frontend.vercel.app/",
+},
 
-  {
-    title: "Real-Time Attentiveness Checker",
-    image: project2,
-    description:
-      "A browser-based tool that detects attentiveness using facial landmarks and eye aspect ratio (EAR) in real-time. Built with MediaPipe, OpenCV, FastAPI, and React.",
-    fullDescription:
-      "Designed and developed a modular attentiveness detection system that uses MediaPipe FaceMesh and OpenCV to analyze facial landmarks and compute the Eye Aspect Ratio (EAR) for drowsiness or focus detection. The FastAPI backend processes frames sent from the webcam-enabled React frontend, which displays live attention status. Engineered for scalability and real-world deployment with clean microservice separation.",
-    technologies: [
-      "FastAPI",
-      "React.js",
-      "OpenCV",
-      "MediaPipe",
-      "Framer Motion",
-    ],
-    github: "https://github.com/thecritiz/distraction-detect",
-  },
+{
+title: "Sentinel",
+image: project2,
+description:
+"Real-time observability and alerting platform for operational monitoring and incident management.",
+fullDescription:
+"Developed a monitoring and alerting platform that aggregates application state data, detects missing assets and dependency failures, streams live logs, and maintains historical alert mappings. Integrated Freshdesk ticketing workflows, role-based access control, and an embedded debugging terminal to accelerate incident resolution.",
+technologies: [
+"React",
+"Node.js",
+"PostgreSQL",
+"WebSockets",
+"Freshdesk API",
+],
+},
+
+{
+title: "Finia",
+image: project3,
+description:
+"AI-powered budgeting and spending optimization platform.",
+fullDescription:
+"Built a finance platform leveraging predictive analytics and NLP-based expense categorization to provide budgeting recommendations, spending insights, and financial forecasting through an intuitive dashboard.",
+technologies: [
+"Next.js",
+"Express",
+"MongoDB",
+"OpenAI",
+"Chart.js",
+],
+},
 ];
-
-
-
-
-
-/* ------------------------------------------------------------------ */
-/*  CONTACT                                                           */
-/* ------------------------------------------------------------------ */
-
-export const CONTACT = {
-  address: "Bengaluru, Karnataka, India",
-  phoneNo: "+91 75959 72638",
-  email: "main.adityapandey@gmail.com",
-};
-/* ------------------------------------------------------------------ */
-/*  BLOG                                                           */
-/* ------------------------------------------------------------------ */
-/* ------------------------------------------------------------------ */
-/*  BLOG                                                              */
-/* ------------------------------------------------------------------ */
-
-export const BLOGS = [
-  {
-    title: "Enhancing Gait Representations for Zero-Shot Person Identification",
-    date: "July 2025",
-    description:
-      "A deep dive into zero-shot gait-based person re-identification using pose sequences, deep embeddings, and privacy-preserving features. Includes open challenges and future directions.",
-    link: "https://medium.com/@thecritizz/enhancing-gait-representations-for-zero-shot-person-identification-challenges-methods-and-future-e1732572ee78"
-  },
-  {
-    title: "Follow My Blog on Medium",
-    date: "Ongoing",
-    description:
-      "I write about full-stack development, computer vision, privacy-preserving AI, and ML-powered web apps. Check out my latest content on Medium.",
-    link: "https://medium.com/@thecritizz"
-  }
-];
-
