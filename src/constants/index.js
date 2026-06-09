@@ -134,7 +134,7 @@ github: "https://github.com/thecritiz/expression-upgraded",
 },
 
 {
-title: "Distraction Detect",
+title: "Distect",
 image: project5,
 description:
 "Real-time attentiveness monitoring using facial landmark analysis.",
@@ -150,20 +150,6 @@ technologies: [
 github: "https://github.com/thecritiz/distraction-detect",
 },
 
-{
-title: "Face Detection JS",
-image: project6,
-description:
-"Browser-based face detection with zero backend infrastructure.",
-fullDescription:
-"Implemented real-time face detection entirely in the browser using face-api.js, enabling lightweight deployment and privacy-preserving computer vision without server-side processing.",
-technologies: [
-"JavaScript",
-"HTML",
-"face-api.js",
-],
-github: "https://github.com/thecritiz/face-detection-js",
-},
 ];
 
 /* ------------------------------------------------------------------ */
