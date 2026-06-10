@@ -18,6 +18,7 @@ const fadeUp = {
 
 const Contact = () => {
   const sectionRef = useRef(null);
+
   const inView = useInView(sectionRef, {
     amount: 0.4,
   });
@@ -48,7 +49,7 @@ const Contact = () => {
       {/* Background Glow */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-cyan-500 via-sky-500 to-purple-500 opacity-10 blur-3xl"
+        className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-cyan-500/10 via-sky-500/10 to-purple-500/10 blur-3xl"
       />
 
       {/* Heading */}
@@ -56,48 +57,48 @@ const Contact = () => {
         variants={fadeUp}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
-        className="mb-16 text-center text-4xl font-semibold"
+        className="mb-16 text-center text-4xl font-semibold text-white"
       >
         Get in Touch
       </motion.h2>
 
-      {/* Contact Info */}
+      {/* Contact Card */}
       <motion.div
         variants={fadeUp}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
-        className="mx-auto flex max-w-xl flex-col gap-6 px-4"
+        className="mx-auto max-w-lg rounded-2xl border border-white/10 bg-white/[0.02] p-8 backdrop-blur-sm"
       >
-        {contactInfo.map(({ icon: Icon, text, href }) => {
-          const content = (
-            <>
-              <Icon className="h-5 w-5 text-cyan-400 transition-colors group-hover:text-white" />
-              <span>{text}</span>
-            </>
-          );
+        <div className="space-y-8">
+          {contactInfo.map(({ icon: Icon, text, href }) => {
+            const content = (
+              <>
+                <div className="flex h-11 w-11 items-center justify-center rounded-full bg-cyan-500/10">
+                  <Icon className="h-5 w-5 text-cyan-400" />
+                </div>
 
-          const className =
-            "group flex items-center justify-center gap-3 text-lg font-medium text-neutral-300 transition-all hover:text-white";
+                <span className="text-lg text-neutral-300 transition-colors group-hover:text-white">
+                  {text}
+                </span>
+              </>
+            );
 
-          return href ? (
-            <motion.a
-              key={text}
-              href={href}
-              whileHover={{ scale: 1.05 }}
-              className={className}
-            >
-              {content}
-            </motion.a>
-          ) : (
-            <motion.div
-              key={text}
-              whileHover={{ scale: 1.05 }}
-              className={className}
-            >
-              {content}
-            </motion.div>
-          );
-        })}
+            return href ? (
+              <motion.a
+                key={text}
+                href={href}
+                whileHover={{ x: 5 }}
+                className="group flex items-center gap-4"
+              >
+                {content}
+              </motion.a>
+            ) : (
+              <div key={text} className="flex items-center gap-4">
+                {content}
+              </div>
+            );
+          })}
+        </div>
       </motion.div>
     </section>
   );

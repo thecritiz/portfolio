@@ -155,9 +155,9 @@ github: "https://github.com/thecritiz/distraction-detect",
 /* ------------------------------------------------------------------ */
 
 export const CONTACT = {
-address: "Bengaluru, Karnataka, India",
-phoneNo: "+91 75959 72638",
-email: "[main.adityapandey@gmail.com](mailto:main.adityapandey@gmail.com)",
+  address: "Bengaluru, Karnataka, India",
+  phoneNo: "+91 75959 72638",
+  email: "main.adityapandey@gmail.com",
 };
 
 /* ------------------------------------------------------------------ */
