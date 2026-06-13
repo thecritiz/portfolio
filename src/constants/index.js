@@ -27,24 +27,25 @@ Outside of work, I build products ranging from WebRTC-based video conferencing p
 export const EXPERIENCES = [
 {
 year: "Oct 2025 – Present",
-role: "Technical Operations Intern",
+role: "Intern",
 company: "Amagi Media Labs",
 description:
-"Diagnosed and resolved production issues in large-scale ad-tech systems by analyzing backend logs, SQL datasets, and REST API responses. Debugged containerized microservices running on Kubernetes, investigated pod-level failures, and validated fixes across staging and production environments. Built internal Python/SQL scripts to automate data validation and reduce manual investigation time. Collaborated with backend engineers to reproduce bugs, verify fixes, and improve system observability through detailed incident reports and dashboards.",
+"Built Sentinel, an automated alerting platform integrated with SLAs to streamline incident detection, issue debugging, and operational control. Monitored and troubleshot Kubernetes and Docker environments using Grafana, Prometheus, and Loki. Managed media workflows across AWS MediaLive, Connect, CloudWatch, CDN, and SNS to ensure uptime and delivery reliability. Resolved operational failures by executing standard SOPs, reducing escalation times for critical incidents.",
 technologies: [
 "Python",
 "SQL",
-"REST APIs",
 "Kubernetes",
 "Docker",
+"Grafana",
+"Prometheus",
+"Loki",
+"AWS",
 "Linux",
-"JIRA",
-"Monitoring & Logs",
 ],
 },
 {
 year: "Apr 2025 – May 2025",
-role: "Software Development Intern",
+role: "Intern",
 company: "Matrix Media Solutions Pvt Ltd",
 description:
 "Built a React + Express full-stack system that automated manual order processing, reduced data-entry effort by 60%, and introduced real-time delivery tracking. Developed internal tooling and services to streamline issue resolution workflows.",
@@ -52,7 +53,7 @@ technologies: ["React", "Express.js", "PostgreSQL", "Node.js"],
 },
 {
 year: "May 2024 – Jun 2024",
-role: "Data Analytics Intern",
+role: "Intern",
 company: "Webrasta Technologies",
 description:
 "Analyzed multi-quarter business datasets using Python and Pandas, uncovering growth trends and operational insights. Developed visualization dashboards that informed marketing strategy and campaign planning.",
