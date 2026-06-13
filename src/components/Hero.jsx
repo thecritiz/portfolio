@@ -51,11 +51,11 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="border-b border-transparent py-16 sm:py-20 lg:py-32"
+      className="border-b border-transparent pt-6 pb-10 sm:pt-8 sm:pb-12 lg:pt-10 lg:pb-16"
     >
       {/* Max-width container */}
       <div className="mx-auto max-w-[1400px] px-4">
-        <div className="flex flex-col-reverse lg:flex-row items-center gap-14 lg:gap-20">
+        <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-12">
 
           {/* TEXT */}
           <div className="w-full lg:w-1/2">
@@ -105,7 +105,7 @@ const Hero = () => {
   initial="hidden"
   animate="visible"
   className="
-    mt-8
+    mt-5
     max-w-[60ch]
     text-left
     text-[clamp(1rem,1.2vw,1.125rem)]
@@ -116,6 +116,47 @@ const Hero = () => {
 >
   {HERO_CONTENT}
 </motion.p>
+
+              {/* CTA buttons */}
+              <motion.div
+                variants={fadeInFromLeft(0.9)}
+                initial="hidden"
+                animate="visible"
+                className="mt-7 flex flex-wrap gap-4 justify-center lg:justify-start"
+              >
+                <a
+                  href="#projects"
+                  onClick={e => {
+                    e.preventDefault()
+                    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })
+                  }}
+                  className="
+                    px-6 py-2.5 rounded-xl text-sm font-medium
+                    bg-gradient-to-r from-purple-600 to-violet-600
+                    hover:from-purple-500 hover:to-violet-500
+                    shadow-[0_4px_20px_rgba(168,85,247,0.35)]
+                    hover:shadow-[0_4px_28px_rgba(168,85,247,0.55)]
+                    transition-all duration-200
+                  "
+                >
+                  View My Work
+                </a>
+                <a
+                  href="#contact"
+                  onClick={e => {
+                    e.preventDefault()
+                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+                  }}
+                  className="
+                    px-6 py-2.5 rounded-xl text-sm font-medium
+                    border border-white/15 bg-white/[0.04] backdrop-blur-sm
+                    hover:border-white/30 hover:bg-white/[0.08]
+                    transition-all duration-200
+                  "
+                >
+                  Get in Touch
+                </a>
+              </motion.div>
 
             </div>
           </div>

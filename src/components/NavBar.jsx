@@ -1,11 +1,10 @@
 import React from 'react'
 import logo from '../assets/Logo.png'
-import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa'
+import { FaLinkedin, FaGithub } from 'react-icons/fa'
 
 const socialLinks = [
   { icon: FaLinkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/mainadityapandey' },
   { icon: FaGithub, label: 'GitHub', href: 'https://github.com/thecritiz' },
-  { icon: FaTwitter, label: 'Twitter', href: 'https://twitter.com/' },
 ]
 
 const NavBar = () => (
