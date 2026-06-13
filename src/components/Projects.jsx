@@ -32,7 +32,7 @@ const Projects = () => {
 
         {/* Ticker track */}
         <div
-          className="flex gap-4 w-max"
+          className="flex w-max"
           style={{ animation: "ticker 35s linear infinite", willChange: "transform" }}
           onMouseEnter={e => e.currentTarget.style.animationPlayState = "paused"}
           onMouseLeave={e => e.currentTarget.style.animationPlayState = "running"}
@@ -41,7 +41,7 @@ const Projects = () => {
             <div
               key={`${project.title}-${index}`}
               onClick={() => setSelectedProject(project)}
-              className="cursor-pointer group flex-shrink-0"
+              className="cursor-pointer group flex-shrink-0 mr-4"
               style={{ width: "280px" }}
             >
               {/* Glassy card */}
